@@ -1,17 +1,10 @@
 ---
-id: objective:core
-title: Core TreeSeed Objective
-description: Make organizational knowledge work visible, governable, reusable, and durable through supervised workdays and operational memory.
-date: 2026-05-18
-summary: TreeSeed's ultimate goal is to coordinate durable organizational work from objective to workday, execution, governance, and knowledge.
-status: live
-timeHorizon: long-term
-motivation: The project needs a stable north star that every human and agent can use to judge product, documentation, runtime, and governance choices over time.
-primaryContributor: market-steward
-relatedQuestions: []
-relatedBooks:
-  - treeseed-guide
-  - treeseed-platform-architecture-development
+schemaVersion: treeseed.objective/v1
+id: market-core
+projectId: market
+title: "Core TreeSeed Objective"
+outcome: "TreeSeed's ultimate goal is to coordinate durable organizational work from objective to workday, execution, governance, and knowledge."
+status: active
 ---
 
 TreeSeed exists to help organizations turn objectives into supervised workdays, reviewed outputs, and durable operational memory.
