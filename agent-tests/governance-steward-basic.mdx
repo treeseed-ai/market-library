@@ -1,17 +1,17 @@
 ---
 id: agent-test:governance-steward-basic
-agent: treeseed-governance-steward
+agent: reviewer
 kind: handler
-fixture: packages/agent/test/fixtures/agent-tests/governance-steward/basic
+fixture: packages/agent/tests/fixtures/agent-tests/governance-steward/basic
 trigger:
   messageType: promotion_request_created
 expect:
   status: waiting
   messages:
     - approval_request_created
-tags:
-  - governance
+groupIds:
   - approval
+  - governance
 ---
 
 This test keeps governance review behavior explicit when a promotion request is

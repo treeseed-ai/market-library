@@ -1,0 +1,7 @@
+schemaVersion: treeseed.proposal-type/v1
+id: editorial-operations
+label: Editorial operations
+description: Changes recurring editorial workdays, agent coordination, reporting, or capacity policy.
+subscriberSignals: [proposal-ready]
+requiredReviewerClasses: [guide-steward, editorial-reporting]
+

@@ -1,0 +1,59 @@
+name: agent-lab-treeseed
+version: 1
+description: Portable Agent Lab profile for TreeSeed Market.
+defaultEnvironments:
+  - local
+environments:
+  - local
+references:
+  - capacity-provider:treeseed/agents
+resources:
+  teams:
+    - key: team:treeseed
+      slug: treeseed
+      name: treeseed
+  projects:
+    - key: project:treeseed/market
+      team: team:treeseed
+      slug: market
+      name: TreeSeed Market
+      description: Public singleton Market web application.
+      kind: market_app
+      repository:
+        role: primary
+        provider: github
+        owner: treeseed-ai
+        name: market
+        gitUrl: https://github.com/treeseed-ai/market.git
+        defaultBranch: main
+        repositoryPolicy:
+          visibility: public
+          lifecycle: create-or-adopt
+          deletionPolicy: retain
+          defaultBranch: main
+          stagingBranch: staging
+          issues: true
+          actions: true
+          workflows:
+            - verify.yml
+      architecture:
+        topology: split_site_content
+        rootPath: .
+        sitePath: .
+        contentPath: src/content
+        contentRuntimeSource: r2_preview_overlay
+        localContentMaterialization: none
+        contentPublishTarget:
+          kind: cloudflare_r2
+          prefix: market
+        requiresLocalContentForCi: false
+        requiresLocalContentForDeploy: false
+runtime:
+  agentLabServicePrincipals:
+    - key: service-principal:treeseed/agent-lab
+      environments:
+        - local
+      team: team:treeseed
+      name: Agent Lab Service Principal
+      roles:
+        - team_owner

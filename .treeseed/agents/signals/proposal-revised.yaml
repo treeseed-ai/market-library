@@ -1,0 +1,17 @@
+schemaVersion: treeseed.agent-signal/v1
+id: proposal-revised
+label: Proposal revision published
+description: Announces an author revision that responds to the synchronized review and estimate snapshot.
+subjectKinds: [proposal]
+allowedOrigins: [treedx-change, deterministic-handler, agent-tool]
+payloadSchema: { required: [proposalId, version, objective, proposalTypes, addressedFeedback, commitSha, digest] }
+filterableFields: [objective, proposalTypes, authorAgentId, addressedFeedback]
+commitEvidence: required
+allowedProducerClasses: [guide-steward, knowledge-cartography]
+subscriberActivityProfiles: [reporting]
+idempotency: commit-subject
+supersession: replace-subject
+coalescing: latest-subject
+evidenceRequirements: [proposal-version, content-receipt, response-summary]
+relationSemantics: [revises]
+

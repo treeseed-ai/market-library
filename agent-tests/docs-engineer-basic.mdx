@@ -1,8 +1,8 @@
 ---
 id: agent-test:docs-engineer-basic
-agent: treeseed-docs-engineer
+agent: engineer
 kind: handler
-fixture: packages/agent/test/fixtures/agent-tests/docs-engineer/basic
+fixture: packages/agent/tests/fixtures/agent-tests/docs-engineer/basic
 trigger:
   messageType: approval_request_approved
 expect:
@@ -10,9 +10,9 @@ expect:
   messages:
     - docs_mutation_failed
   requiresHumanApproval: true
-tags:
-  - mutation
+groupIds:
   - governance
+  - mutation
 ---
 
 This test proves the docs engineer refuses to mutate without an explicit

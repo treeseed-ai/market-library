@@ -1,0 +1,30 @@
+---
+id: guide-work-index
+title: TreeSeed Guide Work index
+description: Retrieve the exact Work index page without spending context budget on its child pages.
+revision: 4
+maturity: draft
+purpose: research
+query: TreeSeed Guide Work index
+target:
+  kind: content
+  models: [knowledge-page]
+  paths: [/knowledge/treeseed-guide/work.md]
+relations: []
+depth: 0
+resultLimit: 1
+contextBudget:
+  maxItems: 1
+  maxCharacters: 5000
+tokenBudget: 1000
+format: full
+sources:
+  - scope: current-project
+requirement: required
+priority: 100
+summarization: none
+filters: {}
+---
+
+This exact-file query supplies the Work index independently of the larger child
+pages so ranking and token pressure cannot silently omit it.

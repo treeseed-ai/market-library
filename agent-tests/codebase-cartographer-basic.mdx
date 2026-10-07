@@ -1,8 +1,8 @@
 ---
 id: agent-test:codebase-cartographer-basic
-agent: treeseed-codebase-cartographer
+agent: researcher
 kind: handler
-fixture: packages/agent/test/fixtures/agent-tests/codebase-cartographer/basic
+fixture: packages/agent/tests/fixtures/agent-tests/codebase-cartographer/basic
 trigger:
   messageType: research_task_requested
 expect:
@@ -11,7 +11,7 @@ expect:
     - research_note_created
   artifacts:
     - research_note
-tags:
+groupIds:
   - research
   - source-map
 ---

@@ -1,0 +1,16 @@
+schemaVersion: treeseed.agent-signal/v1
+id: proposal-submitted
+label: Proposal submitted
+description: Opens a human-submitted objective-bound proposal as an external root for cooperative planning and evaluation.
+subjectKinds: [proposal]
+allowedOrigins: [treedx-change, deterministic-handler]
+payloadSchema: { required: [proposalId, version, proposalTypes, objective] }
+filterableFields: [proposalTypes, objective, priority, authorId]
+commitEvidence: required
+subscriberActivityProfiles: [estimating, reviewing, reporting]
+idempotency: commit-subject
+supersession: replace-subject
+coalescing: latest-subject
+evidenceRequirements: [proposal-version, content-receipt]
+relationSemantics: [submits]
+

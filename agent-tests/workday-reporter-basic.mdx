@@ -1,15 +1,15 @@
 ---
 id: agent-test:workday-reporter-basic
-agent: treeseed-workday-reporter
+agent: reporter
 kind: handler
-fixture: packages/agent/test/fixtures/agent-tests/workday-reporter/basic
+fixture: packages/agent/tests/fixtures/agent-tests/workday-reporter/basic
 trigger:
   messageType: review_passed
 expect:
   status: waiting
   messages:
     - workday_report_created
-tags:
+groupIds:
   - reporting
   - workday
 ---

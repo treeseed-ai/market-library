@@ -1,0 +1,17 @@
+schemaVersion: treeseed.agent-signal/v1
+id: evidence-ready
+label: Discovery evidence ready
+description: Announces immutable objective-linked research, constraints, gaps, or questions.
+subjectKinds: [objective]
+allowedOrigins: [treedx-change, deterministic-handler, agent-tool]
+payloadSchema: { required: [objective, evidenceRefs, changeSummary] }
+filterableFields: [objective, evidenceKinds, proposalTypes]
+commitEvidence: required
+allowedProducerClasses: [evidence-research, guide-writing, technical-verification, audience-review, knowledge-publication, editorial-reporting]
+subscriberActivityProfiles: [planning]
+idempotency: commit-subject
+supersession: append
+coalescing: none
+evidenceRequirements: [content-receipt, changed-paths, digest]
+relationSemantics: [supports]
+

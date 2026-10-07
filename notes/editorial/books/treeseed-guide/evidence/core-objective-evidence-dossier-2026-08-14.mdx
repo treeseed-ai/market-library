@@ -1,0 +1,104 @@
+---
+title: Core Objective Evidence Dossier
+description: Evidence dossier for proposal authors working from the Core
+  TreeSeed Objective into the TreeSeed Guide work chapter.
+date: 2026-08-14
+status: live
+author: evidence-researcher
+summary: Breaks objective:core into source-grounded claims, implementation
+  state, contradictions, Guide coverage, and next investigation needs.
+about:
+  - objective:core
+updated_at: 2026-08-14T09:02:57.176Z
+groupIds:
+  - book
+  - editorial
+  - evidence
+  - treeseed-guide
+related_objectives:
+  - objective:core
+related_questions: []
+related_proposals: []
+related_decisions: []
+related_books:
+  - treeseed-guide
+id: note:core-objective-evidence-dossier-2026-08-14
+relatedObjectives:
+  - core
+---
+## Scope
+
+This dossier supports proposal authors working from `objective:core` into the TreeSeed Guide. It uses the injected passing context-query results as current authoritative input and adds only two focused TreeDX context builds after that shared query set.
+
+## Research Questions
+
+1. What objective-level claims may the Guide safely make about TreeSeed's continuity chain from objective to workday, execution, governance, and knowledge?
+2. Which affected TreeSeed Guide work nodes already exist, and what state are they in?
+3. Which runtime claims have implementation or verification evidence, and which remain only objective/editorial guidance?
+4. Where are contradictions, blocked evidence, or coverage gaps that proposal authors must not paper over?
+
+## TreeDX Queries Performed
+
+- Shared tested query set `guide-work-foundation` revision 2, check `b1a8d0b2-90d7-4c07-9a5d-c5eda4eb2db5`, result digest `319cdf1ba7fd6e6e6166731c8593eb2a10a082df4f4a57f659ec49927908a626`; included `guide.work`, `guide.work.agents`, `guide.work.workdays`, and `guide.work.capacity-providers`.
+- Content query `note` for `objective core evidence treeseed guide`; result: no existing objective-core evidence dossier found.
+- Content read `book` slug `treeseed-guide`; result: blocked by scoped handle with `content_readback_failed` for `src/content/books/treeseed-guide.mdx`. This is recorded as a coverage gap, not retried.
+- Focused context build: `objective workday execution governance knowledge approved artifacts operational memory guide decisions proposals questions notes`; result converged on `docs/agent-capacity-completion.md` at resolved ref `68694f0a5b22d46a337d30c3f36c24d7ff65d7fc`.
+- Focused context build: `workdays agents capacity providers guarantees approved decisions evidence execution trace context artifacts durable memory`; result also converged on `docs/agent-capacity-completion.md` at resolved ref `68694f0a5b22d46a337d30c3f36c24d7ff65d7fc`.
+
+## Source Inventory
+
+- `src/content/objectives/core.md`, editorial context revision `2a51b7292c473a39cf7644212832bea9fb188d80c72ddb1964e261dee1bfc1bd`; state: live objective.
+- `src/content/notes/editorial/core.mdx`, editorial context revision `9d9d32f6980f02b3c16fc2f83b9f08ccb5e415a18c8b8a031ecc5a6aacfb95a2`; state: live editorial instruction.
+- `src/content/notes/editorial/books/treeseed-guide/core.mdx`, editorial context revision `45cc51373b343e19c6cd1fd5adf395464999152e03c92b7cf8e866e9fa61920c`; state: live book-level editorial instruction.
+- `src/content/agents/editorial/evidence-researcher.mdx`; state: active agent spec in injected context.
+- `src/content/knowledge/treeseed-guide/work.md`, TreeDX resolved ref `68694f0a5b22d46a337d30c3f36c24d7ff65d7fc`, object `c0781716a9b795ab2af0265c963133ac7740020d`; state: draft Guide index.
+- `src/content/knowledge/treeseed-guide/work/agents.md`, TreeDX resolved ref `68694f0a5b22d46a337d30c3f36c24d7ff65d7fc`, object `60786ea1af5bdf132661cc861a57ae4096054c1d`; state: draft Guide index.
+- `src/content/knowledge/treeseed-guide/work/workdays.md`, TreeDX resolved ref `68694f0a5b22d46a337d30c3f36c24d7ff65d7fc`, object `8ec6ec0fe2e8724de86b16727d0953bc3d07ea99`; state: draft Guide index.
+- `src/content/knowledge/treeseed-guide/work/capacity-providers.md`, TreeDX resolved ref `68694f0a5b22d46a337d30c3f36c24d7ff65d7fc`, object `4268dd8ef37125845d5e23995a097c10fa31ace1`; state: draft Guide index.
+- `docs/agent-capacity-completion.md`, TreeDX resolved ref `68694f0a5b22d46a337d30c3f36c24d7ff65d7fc`, file identity `file:685333cc66f1b2eb`; state: implementation completion ledger for local runtime, with hosted acceptance explicitly blocked.
+
+## Claim Ledger
+
+| Claim | Evidence | Observed state | Confidence | Contradictions | Guide locations affected |
+| --- | --- | --- | --- | --- | --- |
+| TreeSeed's north-star continuity chain is Objective -> Workday -> Execution -> Governance -> Knowledge. | `src/content/objectives/core.md` rev `2a51b7292c473a39cf7644212832bea9fb188d80c72ddb1964e261dee1bfc1bd`. | planned/normative objective | high | None found. | `guide.work`, `guide.work.workdays`, future foundation and governance pages. |
+| Guide prose should state behavior state and preserve human authority for binding decisions. | `src/content/notes/editorial/core.mdx` rev `9d9d32f...`; `src/content/notes/editorial/books/treeseed-guide/core.mdx` rev `45cc513...`. | implemented editorial contract | high | None found. | All Guide pages, especially work and governance chapters. |
+| The current Guide work chapter hierarchy exists but its pages are draft index pages, not explanatory finished prose. | Shared query set `guide-work-foundation`; paths `work.md`, `work/agents.md`, `work/workdays.md`, `work/capacity-providers.md`, all status `draft`. | planned/draft documentation | high | No contradiction; it limits how much published prose can claim today. | `guide.work`, `guide.work.agents`, `guide.work.workdays`, `guide.work.capacity-providers`. |
+| Workday and capacity runtime has local implementation evidence for duration/budget-bounded planning, governed acting, TreeDX-scoped content access, traceable execution, and exactly-once settlement. | `docs/agent-capacity-completion.md` at TreeDX ref `68694f0a...`; completion ledger says phases 0-14 complete for local operation, 113/113 capacity guarantee validation, real-provider lifecycle, focused parity rerun, and zero-residue cleanup pass. | verified for local runtime | medium-high | Hosted acceptance is blocked; package-local overclaims must not be promoted from focused verifier alone. | `guide.work.workdays`, `guide.work.agents`, `guide.work.capacity-providers`. |
+| Hosted deployment/hosted acceptance should not be presented as complete. | `docs/agent-capacity-completion.md`, CAP-024 and top status: hosted deployment intentionally suspended/blocked. | blocked | high | None; this is an explicit blocker. | Capacity provider and deployment-adjacent Guide pages. |
+| Agent content access and mutation should be described as TreeDX-mediated for production content. | `src/content/notes/editorial/core.mdx`; `docs/agent-capacity-completion.md` nonnegotiable boundary and CAP-016/CAP-042 resolutions. | implemented/verified for local runtime; normative for content process | medium-high | Fixture adapters remain test-only; avoid implying arbitrary filesystem content access is supported. | `guide.work.agents`, `guide.foundation.treedx`, future content workflow pages. |
+| Agents may research, implement, verify, summarize, and prepare recommendations, but must not become visible authority for human-reviewed binding decisions. | `src/content/objectives/core.md`; `src/content/notes/editorial/core.mdx`; `docs/agent-capacity-completion.md` governed acting and approval evidence. | planned editorial rule with local runtime support | high for rule, medium for full product UX | No direct product UX page evidence in scoped context. | `guide.work.agents`, governance chapter pages not included in this assignment. |
+
+## Contradictions And Cautions
+
+- The objective is live and normative, while the affected Guide work pages are draft indexes. Proposal authors should write from the objective and implementation evidence, not imply these Guide pages are finished.
+- Local runtime evidence is strong, but hosted acceptance is explicitly blocked by CAP-024. Any Guide language about deployment must separate local supervised-development readiness from hosted production readiness.
+- The completion ledger warns against promoting broader package claims from focused verifier evidence alone. Claims should cite the exact service-workflow evidence or remain scoped.
+- Direct read of `src/content/books/treeseed-guide.mdx` was denied by assignment scope. The injected book-core editorial note is usable, but the book record itself remains an access gap for this assignment.
+
+## Terminology Decisions
+
+- Use `workday`, not generic batch, job, or sprint, for supervised bounded execution windows.
+- Use `planning` and `acting` as the mode terms; the implementation ledger says only `plan` and live execution modes exist and dry-run terminology was removed.
+- Use `human authority` or `human review` for binding decisions; do not phrase agents as decision owners.
+- Use `durable operational memory` for preserved reviewed output and provenance, not merely documentation.
+- Use `local runtime verified` when citing the current capacity implementation evidence; reserve hosted or production claims until CAP-024 is resolved.
+
+## Coverage Gaps
+
+- Exact TreeSeed Guide book record could not be read within the scoped handle. Do not infer sidebar metadata beyond injected Guide work pages and book-core editorial note.
+- Governance chapter pages, foundation pages, and knowledge publication pages were not in the shared context and were not queried further because the assignment scope centered on the work chapter and the query budget should stay economical.
+- No scoped product UX implementation evidence was collected for the calm operational coordination interface described by `objective:core`; treat that as objective-level intent unless a later UI/source query verifies it.
+- Existing Guide guarantee pages were listed by the work indexes, but individual guarantee bodies were not read. Proposal authors should read the exact guarantee page before quoting a specific guarantee promise.
+
+## Affected Book Nodes
+
+- `guide.work`: should frame work as the operational bridge from objective to supervised execution and durable memory.
+- `guide.work.workdays`: should carry claims about scheduling, bounded duration/budget, eligible planning agents, approved-decision gates, summaries, and settlement, with local/hosted state separated.
+- `guide.work.agents`: should carry claims about agent classes, planning/acting modes, TreeDX-scoped context/content access, execution traces, estimates, and recovery without weakening human authority.
+- `guide.work.capacity-providers`: should carry claims about provider registration, availability, concurrency, reservations, usage settlement, recovery, and the hosted acceptance caveat.
+
+## Recommended Next Investigation
+
+Before a proposal writes Guide prose, run a targeted read of the exact guarantee pages under `guide.work.workdays`, `guide.work.agents`, and `guide.work.capacity-providers` that the proposal intends to quote. Also request or perform a scoped read of `src/content/books/treeseed-guide.mdx` so sidebar/book metadata can be cited directly instead of inferred from injected work-page hierarchy.
+

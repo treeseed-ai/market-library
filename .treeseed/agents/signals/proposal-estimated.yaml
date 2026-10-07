@@ -1,0 +1,17 @@
+schemaVersion: treeseed.agent-signal/v1
+id: proposal-estimated
+label: Proposal estimate recorded
+description: Announces a participant estimate or explicit not-applicable rationale for an exact proposal version.
+subjectKinds: [proposal]
+allowedOrigins: [deterministic-handler, agent-tool]
+payloadSchema: { required: [proposalId, version, participant, disposition] }
+filterableFields: [proposalTypes, participant, disposition]
+commitEvidence: optional
+allowedProducerClasses: [evidence-research, guide-writing, technical-verification, audience-review, knowledge-publication, editorial-reporting, guide-steward, knowledge-cartography]
+subscriberActivityProfiles: [planning, reporting]
+idempotency: explicit-key
+supersession: replace-correlation
+coalescing: latest-subject
+evidenceRequirements: [estimate-record]
+relationSemantics: [estimates]
+

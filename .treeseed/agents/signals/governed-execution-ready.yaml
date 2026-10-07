@@ -1,0 +1,17 @@
+schemaVersion: treeseed.agent-signal/v1
+id: governed-execution-ready
+label: Governed execution ready
+description: Announces approved decision, readiness, and accepted capacity-plan provenance for acting work.
+subjectKinds: [decision]
+allowedOrigins: [deterministic-handler]
+payloadSchema: { required: [decisionId, proposalId, capacityPlanId, readinessDigest] }
+filterableFields: [projectId, objective, proposalTypes]
+commitEvidence: optional
+allowedProducerClasses: [governance-control]
+subscriberActivityProfiles: [acting]
+idempotency: causation-subject
+supersession: replace-subject
+coalescing: latest-subject
+evidenceRequirements: [decision-record, readiness, capacity-plan]
+relationSemantics: [authorizes]
+

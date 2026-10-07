@@ -1,0 +1,7 @@
+schemaVersion: treeseed.proposal-type/v1
+id: evidence-research
+label: Evidence and research
+description: Requires external or repository evidence gathering before a decision is supportable.
+subscriberSignals: [proposal-ready]
+requiredReviewerClasses: [evidence-research, technical-verification]
+

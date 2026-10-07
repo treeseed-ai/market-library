@@ -1,0 +1,16 @@
+schemaVersion: treeseed.agent-signal/v1
+id: proposal-version-published
+label: Proposal version published
+description: Records a human or agent-authored proposal version after immutable TreeDX content and governance state are bound successfully.
+subjectKinds: [proposal]
+allowedOrigins: [treedx-change, deterministic-handler, agent-tool]
+payloadSchema: { required: [proposalId, version, proposalTypes] }
+filterableFields: [proposalTypes, objectives, authorAgentId]
+commitEvidence: optional
+subscriberActivityProfiles: [estimating, reviewing, reporting]
+idempotency: explicit-key
+supersession: replace-subject
+coalescing: latest-subject
+evidenceRequirements: [proposal-version]
+relationSemantics: [publishes-version]
+

@@ -1,0 +1,7 @@
+schemaVersion: treeseed.proposal-type/v1
+id: editorial-strategy
+label: Editorial strategy
+description: Changes narrative purpose, scope, reader outcomes, or editorial sequencing.
+subscriberSignals: [proposal-ready]
+requiredReviewerClasses: [guide-steward, audience-review]
+

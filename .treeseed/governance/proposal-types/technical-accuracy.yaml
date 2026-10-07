@@ -1,0 +1,7 @@
+schemaVersion: treeseed.proposal-type/v1
+id: technical-accuracy
+label: Technical accuracy
+description: Changes consequential implementation, API, security, recovery, or operational claims.
+subscriberSignals: [proposal-ready]
+requiredReviewerClasses: [technical-verification]
+

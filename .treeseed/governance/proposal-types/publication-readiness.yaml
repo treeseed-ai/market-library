@@ -1,0 +1,7 @@
+schemaVersion: treeseed.proposal-type/v1
+id: publication-readiness
+label: Publication readiness
+description: Changes release guarantees, exact revision custody, rollback, or publication policy.
+subscriberSignals: [proposal-ready]
+requiredReviewerClasses: [knowledge-publication, technical-verification]
+

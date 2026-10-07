@@ -1,0 +1,18 @@
+---
+id: agent-test:agent-lab-project-inventory
+agent: evidence-researcher
+kind: workday
+trigger:
+  planningOnly: true
+  agents:
+    - evidence-researcher
+expect:
+  productionPath: true
+  everySelectedAgent: true
+  durableModeRuns: true
+  treeDxOnlyContentAccess: true
+  usageAndSettlement: true
+groupIds: []
+---
+
+Run the enabled agents for this project through a real planning-only workday using the normal provider, AgentKernel, TreeDX, usage, and settlement paths.

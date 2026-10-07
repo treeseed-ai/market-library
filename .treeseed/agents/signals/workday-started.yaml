@@ -1,0 +1,17 @@
+schemaVersion: treeseed.agent-signal/v1
+id: workday-started
+label: Workday started
+description: Opens a bounded workday graph revision for discovery and planning.
+subjectKinds: [workday]
+allowedOrigins: [deterministic-handler]
+payloadSchema: { required: [workdayId, graphRevision, objectives] }
+filterableFields: [objectives]
+commitEvidence: forbidden
+allowedProducerClasses: [workday-control]
+subscriberActivityProfiles: [planning]
+idempotency: causation-subject
+supersession: replace-subject
+coalescing: latest-subject
+evidenceRequirements: [workday-record, graph-snapshot]
+relationSemantics: [opens]
+

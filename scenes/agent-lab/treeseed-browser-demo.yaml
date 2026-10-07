@@ -1,0 +1,71 @@
+schemaVersion: treeseed.scene/v1
+id: treeseed-browser-demo
+title: treeseed Agent Lab Demo
+description: Team-scoped retained cooperative planning simulation.
+audience:
+  - operator
+journey:
+  kind: agent-lab
+  proves: []
+mode:
+  test: false
+  demo: true
+  training: false
+runtime:
+  mode: demo
+target:
+  app: market
+  environment: local
+  baseUrl: auto
+  browser: chromium
+  viewport:
+    width: 1440
+    height: 900
+setup:
+  dev:
+    required: false
+    reuseExisting: true
+  seeds:
+    - name: agent-lab-treeseed
+      environments:
+        - local
+      apply: false
+artifacts:
+  trace: false
+  video: false
+  screenshots: false
+  console: true
+  network: true
+  timeline: true
+  appLogs: true
+workflow: []
+agentLab:
+  scope:
+    kind: team
+    team: team:treeseed
+    capacityProvider: capacity-provider:treeseed/agents
+  provider: local
+  executionProvider: codex-sub
+  presentation: race-control
+  repositories:
+    - market
+  workdays:
+    - id: cooperative-planning-demo
+      title: Cooperative Planning Demo
+      agentTests:
+        - agent-lab-project-inventory
+      durationSeconds: 900
+      timePolicy:
+        cooperativePlanningPercent: 90
+        governedExecutionPercent: 0
+        reservePercent: 10
+      planningSession:
+        rounds: 1
+        assignmentTimeboxSeconds: 600
+        tokenWarning: 12000
+      maxActiveAssignments: 1
+      planningOnly: true
+      activityTypes:
+        - planning
+training:
+  enabled: false

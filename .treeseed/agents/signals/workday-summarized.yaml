@@ -1,0 +1,16 @@
+schemaVersion: treeseed.agent-signal/v1
+id: workday-summarized
+label: Workday summarized
+description: Announces the immutable closeout report and readiness inventory for a workday.
+subjectKinds: [workday]
+allowedOrigins: [treedx-change, deterministic-handler, agent-tool]
+payloadSchema: { required: [workdayId, reportPath, commitSha, readiness] }
+filterableFields: [objectives, readiness]
+commitEvidence: required
+allowedProducerClasses: [editorial-reporting]
+idempotency: commit-subject
+supersession: replace-subject
+coalescing: latest-subject
+evidenceRequirements: [workday-report, content-receipt]
+relationSemantics: [summarizes]
+

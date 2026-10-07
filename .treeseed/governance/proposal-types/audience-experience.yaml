@@ -1,0 +1,7 @@
+schemaVersion: treeseed.proposal-type/v1
+id: audience-experience
+label: Audience experience
+description: Changes reader journeys, prerequisites, terminology, accessibility, or learning outcomes.
+subscriberSignals: [proposal-ready]
+requiredReviewerClasses: [audience-review]
+

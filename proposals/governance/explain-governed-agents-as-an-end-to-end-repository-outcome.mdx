@@ -1,0 +1,106 @@
+---
+id: 744b28ea-0338-445e-9244-9adaaf5ff7b8
+title: Explain governed agents as an end-to-end repository outcome
+description: Replace the guarantee-only Agents index with an evidence-backed
+  explanation of how a governed agent turns live TreeDX context and an accepted
+  decision into a validated, integrated, receipt-backed repository outcome.
+summary: Replace the guarantee-only Agents index with an evidence-backed
+  explanation of how a governed agent turns live TreeDX context and an accepted
+  decision into a validated, integrated, receipt-backed repository outcome.
+date: 2026-08-13T23:36:35.100Z
+status: in progress
+draft: false
+proposalType: editorial-strategy
+proposalTypes:
+  - editorial-strategy
+motivation: Replace the guarantee-only Agents index with an evidence-backed
+  explanation of how a governed agent turns live TreeDX context and an accepted
+  decision into a validated, integrated, receipt-backed repository outcome.
+primaryContributor: team-key:local-capacity-acceptance
+relatedObjectives:
+  - objective:harden-documentation-automation-workday-loop
+evidenceRefs:
+  - agent-context-query:guide-work-index@2
+  - agent-context-query:guide-work-sections@3
+  - agent-context-query-set:guide-work-foundation@2
+  - src/content/knowledge/treeseed-guide/work/agents.md
+  - src/content/knowledge/treeseed-guide/work/workdays.md
+  - src/content/knowledge/treeseed-guide/work/capacity-providers.md
+  - workday-run:editorial-planning-canary-2-20260813
+  - workday-run:editorial-planning-canary-3-20260813
+  - workday-run:editorial-planning-canary-4-20260813
+plan:
+  desiredOutcome: Readers can understand and verify how a TreeSeed agent converts
+    current governed context into a correct repository outcome, including the
+    evidence and cleanup required before the system calls the work successful.
+  currentProblem: The current Agents index is guarantee-oriented and does not
+    explain the connected runtime lifecycle, leaving readers unable to
+    distinguish assignment execution from a validated and integrated content
+    result.
+  proposedApproach: Guide Writer will use the validated live Guide context-query
+    set, inspect the exact current pages, and rewrite only the Agents index as a
+    cohesive lifecycle explanation whose claims are checked by an independent
+    editorial verifier.
+  scope:
+    - Replace src/content/knowledge/treeseed-guide/work/agents.md with an
+      evidence-backed lifecycle explanation.
+    - Preserve and clarify its relationship to Work, Workdays, and Capacity
+      Providers.
+    - Explain dynamic query execution, governance, assignment safety, artifacts,
+      signals, integration, settlement, and cleanup.
+  nonGoals:
+    - No Admin or Atlas UI redesign.
+    - No hosted deployment, staging promotion, or production release.
+    - No changes to Workdays or Capacity Providers pages in this canary.
+  deliverables:
+    - One validated revision of
+      src/content/knowledge/treeseed-guide/work/agents.md.
+    - One independent review tied to the exact content revision.
+    - Exact TreeDX integration and artifact-mutation receipts for the target
+      branch.
+  acceptanceCriteria:
+    - The exact target page explains the full governed lifecycle and never
+      equates process completion with repository success.
+    - Dynamic context queries are described as current reads whose results are
+      not committed or saved.
+    - The page contains no unsupported hosted, release, or UI-readiness claims.
+    - The target commit, changed path, validation, review, integration,
+      settlement, and cleanup evidence agree.
+  risks:
+    - The writer may repeat architecture terminology without producing a useful
+      reader journey.
+    - The content may overstate planned receipt, signal, or recovery behavior as
+      active.
+    - A valid assignment may still produce an incomplete or incorrectly placed
+      repository artifact.
+  dependencies:
+    - Passing isolated context-query tests for the exact query revisions
+      referenced by Guide Writer.
+    - An accepted governance decision and scheduled capacity plan before acting
+      admission.
+    - Independent content review before target-branch integration.
+  alternatives:
+    - Leave the guarantee index unchanged and defer explanation until the UI is
+      redesigned; rejected because backend dogfood needs a real semantic outcome
+      now.
+    - Rewrite all three Work pages together; deferred until the single-page
+      agent canary succeeds twice.
+  verification:
+    - Assert the exact content model, path, subject, book relationship, required
+      claims, and absence of unsupported claims.
+    - Read the integrated page back from the exact observed TreeDX target ref.
+    - Match receipt paths and hashes to the integrated revision and confirm
+      independent review.
+    - Confirm every assignment is terminal and settled with no lease,
+      reservation, workspace, unpublished state, or stale branch.
+  openQuestions: []
+---
+The current Guide index describes guarantees but does not give a reader a coherent account of the actual agent lifecycle. This initiative asks Guide Writer to replace that index with a useful explanation grounded in the implemented control-plane and content contracts.
+
+The page must explain dynamic context queries without persisting query results; validated query definitions and test evidence establish eligibility, while every assignment executes the query again against its authorized current TreeDX ref. It must connect agent definitions and groups, per-model permissions, assignment planning and time safety, operational status and summaries, discussion suspension and continuation, artifact receipts and signals, independent review, target-branch integration, settlement, and residue cleanup.
+
+Success is the exact Guide page at `src/content/knowledge/treeseed-guide/work/agents.md`, linked into the existing Work reader journey, with claims limited to observed backend behavior. Assignment execution alone is not success. The content must validate, be independently reviewed, integrate at an observed target ref, carry a matching artifact receipt, settle, and leave no lease, reservation, workspace, unpublished state, or stale assignment branch.
+
+
+
+

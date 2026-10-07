@@ -1,0 +1,7 @@
+schemaVersion: treeseed.proposal-type/v1
+id: knowledge-architecture
+label: Knowledge architecture
+description: Changes book structure, stable identities, relations, navigation, or retrieval behavior.
+subscriberSignals: [proposal-ready]
+requiredReviewerClasses: [knowledge-cartography, technical-verification]
+

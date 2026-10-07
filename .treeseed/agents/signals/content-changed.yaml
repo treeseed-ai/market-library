@@ -1,0 +1,17 @@
+schemaVersion: treeseed.agent-signal/v1
+id: content-changed
+label: Content changed
+description: Projects a verified TreeDX commit or removal into the signal graph.
+subjectKinds: [knowledge, book, note, question, proposal]
+allowedOrigins: [treedx-change]
+payloadSchema: { required: [commitSha, digest, changedPaths, changeSummary] }
+filterableFields: [subjectKind, changedPaths, proposalTypes, objectives]
+commitEvidence: required
+allowedProducerClasses: [treedx-projector]
+subscriberActivityProfiles: [planning, reviewing, reporting]
+idempotency: commit-subject
+supersession: append
+coalescing: none
+evidenceRequirements: [commit, diff, content-receipt]
+relationSemantics: [changes]
+
